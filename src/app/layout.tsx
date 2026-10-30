@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description: "APIs, authentication, payments, and databases for real-world systems.",
     type: "website",
   },
+  verification: {
+    google: "uYJ6ptWFT19W2RU0nz1vgXcx8wahKlvFFSZbOS0zRqQ",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
