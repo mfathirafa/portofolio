@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { experience, featured, more, skills } from "@/lib/data";
 import { useL, useLang } from "@/lib/i18n";
 import { ui } from "@/lib/ui";
+import { Logo } from "@/components/logo";
 
 const heading = "font-[family-name:var(--font-heading)] tracking-tight";
 const link = "font-medium text-[#2438c9]";
@@ -22,7 +23,10 @@ export function Header() {
 
   return (
     <header className="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-4 px-6">
-      <Link href="/" className="font-semibold">Muhammad Fathi Rafa</Link>
+      <Link href="/" className="flex items-center gap-3 font-semibold">
+        <Logo />
+        <span className="hidden sm:inline">Muhammad Fathi Rafa</span>
+      </Link>
       <nav className="hidden gap-8 text-muted-foreground md:flex">
         {ui.nav.map((n) => (
           <Link key={n.id} href={`/#${n.id}`} className="hover:text-foreground">{L(n.label)}</Link>
