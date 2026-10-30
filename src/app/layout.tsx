@@ -11,9 +11,15 @@ const heading = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.muhammadfathirafa.my.id"),
   title: "Muhammad Fathi Rafa, Software Engineer",
   description:
     "Portfolio of Muhammad Fathi Rafa: APIs, authentication, payments, and databases for real-world systems.",
+  openGraph: {
+    title: "Muhammad Fathi Rafa, Software Engineer",
+    description: "APIs, authentication, payments, and databases for real-world systems.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
