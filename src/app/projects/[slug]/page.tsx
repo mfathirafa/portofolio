@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const d = details[slug];
-  return d ? { title: `${d.title} | Muhammad Fathi Rafa`, description: d.intro } : {};
+  return d ? { title: `${d.title} | Muhammad Fathi Rafa`, description: d.intro.en } : {};
 }
 
 function ProjectSkeleton() {
