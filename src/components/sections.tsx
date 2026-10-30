@@ -11,7 +11,7 @@ const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 export function Header() {
   return (
     <header className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-      <Link href="/" className="font-semibold">Fathi Rafa</Link>
+      <Link href="/" className="font-semibold">Muhammad Fathi Rafa</Link>
       <nav className="hidden gap-8 text-muted-foreground md:flex">
         {["projects", "experience", "skills", "contact"].map((id) => (
           <Link key={id} href={`/#${id}`} className="capitalize hover:text-foreground">{id}</Link>
