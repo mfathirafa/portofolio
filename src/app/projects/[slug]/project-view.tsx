@@ -60,7 +60,7 @@ export function ProjectView({ d }: { d: Detail }) {
 
       <div className="flex items-center justify-between border-t py-8 pb-16">
         <span className="text-muted-foreground">{L(labels.next)}</span>
-        <Link href={d.next.href} className="font-medium text-[#2438c9]">{d.next.name}</Link>
+        <Link href={d.next.href} className="font-medium underline decoration-2 underline-offset-4">{d.next.name}</Link>
       </div>
     </main>
   );

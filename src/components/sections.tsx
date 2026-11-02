@@ -11,7 +11,7 @@ import { ui } from "@/lib/ui";
 import { Logo } from "@/components/logo";
 
 const heading = "font-[family-name:var(--font-heading)] tracking-tight";
-const link = "font-medium text-[#2438c9]";
+const link = "font-medium underline decoration-2 underline-offset-4";
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 export function Header() {
@@ -57,32 +57,18 @@ export function Header() {
 export function Hero() {
   const L = useL();
   return (
-    <section className="grid items-end gap-12 pb-6 pt-16 lg:grid-cols-[1.55fr_1fr] lg:gap-16 lg:pt-20">
+    <section className="grid items-end gap-12 pb-14 pt-12 lg:grid-cols-[1fr_230px] lg:gap-16">
       <div>
-        <h1 className={`${heading} text-5xl font-bold leading-[1.05] md:text-6xl`}>{L(ui.heroTitle)}</h1>
-        <p className="mt-7 max-w-[58ch] text-lg text-muted-foreground">{L(ui.heroText)}</p>
-        <div className="mt-9 flex gap-3">
-          <Button size="lg" render={<a href="#projects" />}>{L(ui.viewProjects)}</Button>
-          <Button size="lg" variant="outline" render={<a href="#contact" />}>{L(ui.contactMe)}</Button>
-        </div>
+        <h1 className={`${heading} text-5xl font-bold leading-[1.02] md:text-7xl`}>{L(ui.heroTitle)}</h1>
+        <p className="mt-7 max-w-[60ch] text-lg text-muted-foreground">{L(ui.heroText)}</p>
       </div>
-      <div className="rounded-xl border bg-muted/40 p-6">
-        <div className="flex items-center gap-4 border-b pb-5">
-          <Image src="/photo.jpg" alt="Muhammad Fathi Rafa" width={88} height={110} className="h-[110px] w-[88px] rounded-lg object-cover object-top" />
-          <div>
-            <div className="text-lg font-semibold">Muhammad Fathi Rafa</div>
-            <div className="text-muted-foreground">Software Engineer</div>
-          </div>
-        </div>
-        <dl className="mt-5 grid grid-cols-[90px_1fr] gap-x-3 gap-y-2.5">
-          {ui.facts.map(([k, v]) => (
-            <div key={k.en} className="contents">
-              <dt className="text-muted-foreground">{L(k)}</dt>
-              <dd>{L(v)}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
+      <Image
+        src="/photo.jpg"
+        alt="Muhammad Fathi Rafa"
+        width={230}
+        height={290}
+        className="h-[290px] w-[230px] rounded-2xl object-cover object-top shadow-[14px_14px_0_#f2b01e]"
+      />
     </section>
   );
 }

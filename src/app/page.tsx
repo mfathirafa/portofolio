@@ -1,4 +1,5 @@
-import { Contact, Experience, Featured, Header, Hero, MoreProjects, Skills } from "@/components/sections";
+import { Contact, Experience, Header, Hero, MoreProjects, Skills } from "@/components/sections";
+import { Showcase } from "@/components/showcase";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
       <Header />
       <main className="mx-auto max-w-6xl px-6">
         <Hero />
-        <Featured />
+        <Showcase />
         <MoreProjects />
         <Experience />
         <Skills />

@@ -240,3 +240,14 @@
     @apply font-sans font-mono;
   }
 }
+
+:root {
+  --background: #f2f4fa;
+  --foreground: #14193a;
+  --card: #ffffff;
+  --muted: #e7ebf6;
+  --muted-foreground: #4a5278;
+  --border: #c9d0e6;
+  --primary: #f2b01e;
+  --primary-foreground: #14193a;
+}
