@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { logoDataUri } from "@/lib/logo-svg";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
@@ -6,9 +7,8 @@ export const contentType = "image/png";
 export default function AppleIcon() {
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "#171717" }}>
-        <div style={{ color: "#ffffff", fontSize: 68, fontWeight: 700, letterSpacing: -3, lineHeight: 1 }}>MFR</div>
-        <div style={{ width: 80, height: 11, borderRadius: 6, background: "#5a74ff", marginTop: 20 }} />
+      <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: "#f2f4fa" }}>
+        <img src={logoDataUri({ stroke: 8, view: "4 4 56 56" })} width={140} height={140} alt="" />
       </div>
     ),
     size,
